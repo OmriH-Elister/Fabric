@@ -1,5 +1,35 @@
 # Changelog
 
+## v1.4.300 (2025-08-28)
+
+### PR [#1732](https://github.com/danielmiessler/Fabric/pull/1732) by [ksylvan](https://github.com/ksylvan): CI Infra: Changelog Generation Tool + Docker Image Pubishing
+
+- Add GitHub Actions workflow to publish Docker images on tags
+- Build multi-arch images with Buildx and QEMU across amd64, arm64
+- Tag images using semver; push to GHCR and Docker Hub
+- Gate patterns workflow steps on detected changes instead of failing
+- Auto-detect GitHub owner and repo from git remote URL
+
+## v1.4.299 (2025-08-27)
+
+### PR [#1731](https://github.com/danielmiessler/Fabric/pull/1731) by [ksylvan](https://github.com/ksylvan): chore: upgrade ollama dependency from v0.9.0 to v0.11.7
+
+- Updated ollama package from version 0.9.0 to 0.11.7
+- Fixed 8 security vulnerabilities including 5 high-severity CVEs that could cause denial of service attacks
+- Patched Ollama server vulnerabilities related to division by zero errors and memory exhaustion
+- Resolved security flaws that allowed malicious GGUF model file uploads to crash the server
+- Enhanced system stability and security posture through comprehensive dependency upgrade
+
+## v1.4.298 (2025-08-27)
+
+### PR [#1730](https://github.com/danielmiessler/Fabric/pull/1730) by [ksylvan](https://github.com/ksylvan): Modernize Dockerfile with Best Practices Implementation
+
+- Remove docker-test framework and simplify production docker setup by eliminating complex testing infrastructure
+- Delete entire docker-test directory including test runner scripts and environment configuration files
+- Implement multi-stage build optimization in production Dockerfile to improve build efficiency
+- Remove docker-compose.yml and start-docker.sh helper scripts to streamline container workflow
+- Update README documentation with cleaner Docker usage instructions and reduced image size benefits
+
 ## v1.4.297 (2025-08-26)
 
 ### PR [#1729](https://github.com/danielmiessler/Fabric/pull/1729) by [ksylvan](https://github.com/ksylvan): Add GitHub Community Health Documents
