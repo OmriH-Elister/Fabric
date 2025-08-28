@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.4.299 (2025-08-28)
+
+### Direct commits
+
+- Merge branch 'main' into OmriH-Elister/main
+- Fix: update Docker workflow to use specific Dockerfile and monitor markdown file changes
+• Add explicit Dockerfile path to Docker build action
+• Remove markdown files from workflow paths-ignore filter
+• Enable CI triggers for documentation file changes
+• Specify Docker build context with custom file location
+- Removed spare redundant file
+
 ## v1.4.301 (2025-08-28)
 
 ### PR [#1735](https://github.com/danielmiessler/Fabric/pull/1735) by [ksylvan](https://github.com/ksylvan): Fix Docker Build Path Configuration
