@@ -1,105 +1,14 @@
 # Changelog
 
-## v1.4.298 (2025-08-28)
+## v1.4.301 (2025-08-28)
 
-### Direct commits
+### PR [#1735](https://github.com/danielmiessler/Fabric/pull/1735) by [ksylvan](https://github.com/ksylvan): Fix Docker Build Path Configuration
 
-- Merge branch 'danielmiessler:main' into main
-- Ci: add tag-based multi-arch Docker publish to GHCR and Docker Hub
-CHANGES
-
-- Add GitHub Actions workflow to publish Docker images on tags
-- Build multi-arch images with Buildx and QEMU across amd64, arm64
-
-- Tag images using semver; push to GHCR and Docker Hub
-- Set :latest only for highest semver tag via imagetools
-
-- Gate patterns workflow steps on detected changes instead of failing
-- Auto-detect GitHub owner and repo from git remote URL
-
-- Remove hardcoded repository values in changelog release manager
-- Normalize image names to lowercase for registry compatibility
-
-- Enable GitHub Actions cache for faster Docker builds
-- Add VS Code dictionary entries for Docker-related terms
-- Chore: upgrade ollama dependency from v0.9.0 to v0.11.7
-• Update ollama package to version 0.11.7
-• Refresh go.sum with new dependency checksums
-
-- **Link**: [<https://nvd.nist.gov/vuln/detail/CVE-2025-0317](https://nvd.nist.gov/vuln/detail/CVE-2025-0317)>
-- **CVSS Score**: 7.5 (High)
-
-- **Description**: A vulnerability in ollama/ollama versions <=0.3.14 allows a malicious user to upload and create a customized GGUF model file on the Ollama server. This can lead to a division by zero error in the ggufPadding function, causing the server to crash and resulting in a Denial of Service (DoS) attack.
-- **Affected**: Ollama server versions ≤ 0.3.14
-
-- **Impact**: Denial of Service through division by zero error
-- **Link**: [<https://nvd.nist.gov/vuln/detail/CVE-2025-0315](https://nvd.nist.gov/vuln/detail/CVE-2025-0315)>
-
-- **CVSS Score**: 7.5 (High)
-- **Description**: Vulnerability allows Denial of Service via customized GGUF model file upload on Ollama server.
-
-- **Affected**: Ollama/ollama versions ≤ 0.3.14
-- **Impact**: Denial of Service through malicious GGUF model file uploads
-
-- **Link**: [<https://nvd.nist.gov/vuln/detail/CVE-2024-12886](https://nvd.nist.gov/vuln/detail/CVE-2024-12886)>
-- **CVSS Score**: 7.5 (High)
-
-- **Description**: An Out-Of-Memory (OOM) vulnerability exists in the ollama server version 0.3.14. This vulnerability can be triggered when a malicious API server responds with a gzip bomb HTTP response, leading to the ollama server crashing.
-- **Affected**: Ollama server version 0.3.14
-
-- **Impact**: Denial of Service through memory exhaustion via gzip bomb attack
-- **Link**: [<https://nvd.nist.gov/vuln/detail/CVE-2024-8063](https://nvd.nist.gov/vuln/detail/CVE-2024-8063)>
-
-- **CVSS Score**: 7.5 (High)
-- **Description**: Security vulnerability with high severity rating
-
-- **Impact**: Requires patching for security compliance
-- **Link**: [<https://nvd.nist.gov/vuln/detail/CVE-2024-12055](https://nvd.nist.gov/vuln/detail/CVE-2024-12055)>
-
-- **CVSS Score**: 7.5 (High)
-- **Description**: High-severity security vulnerability requiring immediate attention
-
-- **Impact**: Critical security flaw needing remediation
-- **Link**: [<https://nvd.nist.gov/vuln/detail/CVE-2025-51471](https://nvd.nist.gov/vuln/detail/CVE-2025-51471)>
-
-- **CVSS Score**: 6.9 (Medium)
-- **Description**: Medium severity security vulnerability
-
-- **Impact**: Security risk requiring patching as part of comprehensive security updates
-- **Link**: [<https://nvd.nist.gov/vuln/detail/CVE-2025-46394](https://nvd.nist.gov/vuln/detail/CVE-2025-46394)>
-
-- **CVSS Score**: 3.2 (Low)
-- **Description**: Low-severity security issue
-
-- **Impact**: Minor security concern addressed as part of comprehensive security maintenance
-- **Link**: [<https://nvd.nist.gov/vuln/detail/CVE-2024-58251](https://nvd.nist.gov/vuln/detail/CVE-2024-58251)>
-
-- **CVSS Score**: 2.5 (Low)
-- **Description**: Low-severity security vulnerability
-
-- **Impact**: Minimal security risk addressed for comprehensive security posture
-This comprehensive security fix addresses **8 CVEs*- total:
-- **5 High Severity*- vulnerabilities (CVSS 7.5)
-
-- **1 Medium Severity*- vulnerability (CVSS 6.9)
-- **2 Low Severity*- vulnerabilities (CVSS 3.2 and 2.5)
-The majority of high-severity issues are related to **Ollama server vulnerabilities*- that could lead to Denial of Service attacks through various vectors including division by zero errors, memory exhaustion, and malicious file uploads. These fixes ensure robust protection against these attack vectors and maintain system availability.
-**Priority**: The high-severity Ollama vulnerabilities should be considered critical for any systems running Ollama server components, as they can lead to service disruption and potential system crashes.
-- Chore: remove docker-test framework and simplify production docker setup
-
-- Remove entire docker-test directory and testing infrastructure
-- Delete complex test runner script and environment files
-
-- Simplify production Dockerfile with multi-stage build optimization
-- Remove docker-compose.yml and start-docker.sh helper scripts
-
-- Update README with cleaner Docker usage instructions
-- Streamline container build process and reduce image size
-- Create system.md
-- Create Create_fiction_about_person
-This pattern's purpose is to take a psychological profile, etiher as  a file or raw input, from the user and use it to generate a story revolving around the profiled personality as the main character.
-- Create system.md
-This pattern's purpose is to take a psychological profile, either in the form of raw data and/or as a file from the user, as input and construct a program for "healing" the person psychologically and/or mentally.
+- Fix: update Docker workflow to use specific Dockerfile and monitor markdown file changes
+- Add explicit Dockerfile path to Docker build action
+- Remove markdown files from workflow paths-ignore filter
+- Enable CI triggers for documentation file changes
+- Specify Docker build context with custom file location
 
 ## v1.4.300 (2025-08-28)
 
