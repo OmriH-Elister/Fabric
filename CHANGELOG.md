@@ -1,5 +1,81 @@
 # Changelog
 
+## v1.4.305 (2025-10-22)
+
+### PR [#1780](https://github.com/danielmiessler/Fabric/pull/1780) by [marcas756](https://github.com/marcas756): feat: add extract_characters pattern
+
+- Define character extraction goals and steps with canonical naming and deduplication rules
+- Outline interaction mapping and narrative importance analysis
+- Provide comprehensive output schema with proper formatting guidelines
+- Include positive and negative examples for pattern clarity
+- Enforce restrictions on speculative motivations and non-actor inclusion
+
+### PR [#1794](https://github.com/danielmiessler/Fabric/pull/1794) by [starfish456](https://github.com/starfish456): Enhance web app docs
+
+- Remove duplicate content from the main readme and link to the web app readme
+- Update table of contents with proper nesting and fix minor formatting issues
+
+### PR [#1805](https://github.com/danielmiessler/Fabric/pull/1805) by [OmriH-Elister](https://github.com/OmriH-Elister): Added several new patterns
+
+- Chore(release): Update version to v1.4.303
+- Create produce_report.sh
+Added a script that compiles one  organized file out of all of the folder's text files. The script proceeds to use said file as  psychological data  input for Fabric's "analyze_personality" pattern, and outputs an analysis report.
+- Chore(release): Update version to v1.4.304
+- Merge branch 'danielmiessler:main' into main
+- Feat: add several new patterns
+- Feat: add several new patterns:
+ 1.predict_person_actions - takes a stream of text, devided into two sections of text, as input from the user, a psychological profile of a person, and b. a particular challenge. It then proceeds to predict how said person is most likely to react to such a challenge.
+ 2.fix_typos - takes a single stream of text as input from the user, proof-reads it, fixes all of the found typos, produces and returns a typo-free copy of the provided text.
+ 3.recommend_yoga_practice - meant to simulate a wise yogi, take input from the user, and provied a uniquely tailored yoga and meditation program for the user.
+ 4.model_as_sherlock_freud - assumes the role of a cross between Sherlock Holmes and Sigmond Freud, receives input from the user (text written by and/or about the subject) and constructs the most complete theoretical model of the subject's mind, including the subconsious, semi-conscious and conscious levels.
+- Fix: slightly reorganized
+
+### Direct commits
+
+- Merge branch 'feature'
+- Chore: incoming 1805 changelog entry
+- Chore: incoming 1805 changelog entry
+- Fix: slightly reorganized
+- Feat: add several new patterns:
+ 1.predict_person_actions - takes a stream of text, devided into two sections of text, as input from the user, a psychological profile of a person, and b. a particular challenge. It then proceeds to predict how said person is most likely to react to such a challenge.
+ 2.fix_typos - takes a single stream of text as input from the user, proof-reads it, fixes all of the found typos, produces and returns a typo-free copy of the provided text.
+ 3.recommend_yoga_practice - meant to simulate a wise yogi, take input from the user, and provied a uniquely tailored yoga and meditation program for the user.
+ 4.model_as_sherlock_freud - assumes the role of a cross between Sherlock Holmes and Sigmond Freud, receives input from the user (text written by and/or about the subject) and constructs the most complete theoretical model of the subject's mind, including the subconsious, semi-conscious and conscious levels.
+- Feat: add several new patterns
+- Merge branch 'danielmiessler:main' into main
+- Chore: added `extract_characters` method for detailed character analysis
+
+- Add `extract_characters` to identify and describe characters
+
+- Update business category to include `extract_characters`
+- Include `extract_characters` in extract category
+
+- Add `extract_characters` description in pattern descriptions JSON
+- Update user documentation with `extract_characters` details
+- Chore: incoming 1780 changelog entry
+- Chore: incoming 1794 changelog entry
+- Docs: update table of contents with proper nesting and fix minor formatting issues
+
+- Add top-level project name to navigation hierarchy
+
+- Nest all sections under main project heading
+- Fix npm install script path extension
+
+- Update localhost URL to use HTML format
+- Add "Mdsvex" to VSCode spelling dictionary
+
+- Include "details" and "summary" to HTML tags
+- Remove trailing newline from web README
+- Docs: remove redundant content and simplify the web app readme
+- Docs: remove duplicate content from the main readme and link to the web app readme
+- Docs: clean up README - remove duplicate image and add collapsible updates section
+
+- Remove duplicate fabric-summarize.png screenshot
+- Wrap Updates section in HTML details/summary accordion to save space
+🤖 Generated with [Claude Code](<https://claude.com/claude-code)>
+Co-Authored-By: Claude <noreply@anthropic.com>
+- Updated CSE pattern.
+
 ## v1.4.304 (2025-09-30)
 
 ### Direct commits
